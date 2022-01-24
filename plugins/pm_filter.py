@@ -413,10 +413,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://telegram.me/Taarak_Maheta_Ka_Oolta_Chasma')
+            InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4')
             ],[
-            InlineKeyboardButton('🧊 𝐌𝐨𝐯𝐢𝐞𝐬', url='https://t.me/joinchat/FFkCfm4Ce_Q2NmNl'),
-            InlineKeyboardButton('📢 𝐂𝐡𝐚𝐭𝐭𝐢𝐧𝐠', url='https://t.me/TMKOCFUNEPI')
+            InlineKeyboardButton('🧊 𝐌𝐨𝐯𝐢𝐞𝐬', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4'),
+            InlineKeyboardButton('📢 𝐂𝐡𝐚𝐭𝐭𝐢𝐧𝐠', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat='')
             ],[
@@ -448,12 +448,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://telegram.me/Taarak_Maheta_Ka_Oolta_Chasma')
+            InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4')
             ],[
-            InlineKeyboardButton('🆘 Get Help', url='https://t.me/TMKOCFUNEPI'),
-            InlineKeyboardButton('🌴 My Group', url='https://t.me/joinchat/FFkCfm4Ce_Q2NmNl')
+            InlineKeyboardButton('🆘 Get Help', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4'),
+            InlineKeyboardButton('🌴 My Group', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4')
             ],[
-            InlineKeyboardButton('🧑‍💻 Developer', url='https://telegram.me/Taarak_Maheta_Ka_Oolta_Chasma'),
+            InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/joinchat/ScOvG9r5i5W7n7y4'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start')
@@ -656,7 +656,7 @@ async def auto_filter(client, msg, spoll=False):
             url = imdb['url']
         )
     else:
-        cap = f"<b>🤭 {search} </b>𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐘 <b>@ReQuest_Movies_V3</b> ✨ 𝐅𝐨𝐮𝐧𝐝𝐞𝐝 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 🤗"
+        cap = f"<b>🤭 {search} </b>𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐘\n\n<b>@ReQuest_Movies_V3</b>\n\n<b>@ReQuest_Movies_V4<b>\n\n✨ 𝐅𝐨𝐮𝐧𝐝𝐞𝐝 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 🤗"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
